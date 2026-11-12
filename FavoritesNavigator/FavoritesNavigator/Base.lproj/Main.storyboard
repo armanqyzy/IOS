@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="25408" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nvC-01-aaa">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="25407"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="s01-Nv-Sc1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nvC-01-aaa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="nvB-01-aaa">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lsV-02-aaa" kind="relationship" relationship="rootViewController" id="rel-01-aaa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fr1-01-aaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-400" y="100"/>
+        </scene>
+        <!--My USA Trips-->
+        <scene sceneID="s02-Ls-Sc1">
+            <objects>
+                <viewController id="lsV-02-aaa" customClass="FavoritesViewController" customModule="FavoritesNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lsW-02-aaa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tbl-02-aaa">
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="FavoriteCell" rowHeight="90" id="cel-02-aaa" customClass="FavoriteCell" customModule="FavoritesNavigator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cel-02-aaa" id="ccv-02-aaa">
+                                            <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="golden_gate" translatesAutoresizingMaskIntoConstraints="NO" id="cim-02-aaa">
+                                                    <rect key="frame" x="16" y="10" width="70" height="70"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="c11-Ks-011"/>
+                                                        <constraint firstAttribute="height" constant="70" id="c12-Ks-012"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" text="Golden Gate Bridge" numberOfLines="2" id="clb-02-aaa">
+                                                    <rect key="frame" x="98" y="35" width="256.66666666666669" height="20.333333333333332"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="cim-02-aaa" firstAttribute="leading" secondItem="ccv-02-aaa" secondAttribute="leading" constant="16" id="c13-Ks-013"/>
+                                                <constraint firstItem="cim-02-aaa" firstAttribute="centerY" secondItem="ccv-02-aaa" secondAttribute="centerY" id="c14-Ks-014"/>
+                                                <constraint firstItem="clb-02-aaa" firstAttribute="leading" secondItem="cim-02-aaa" secondAttribute="trailing" constant="12" id="c15-Ks-015"/>
+                                                <constraint firstItem="ccv-02-aaa" firstAttribute="trailing" secondItem="clb-02-aaa" secondAttribute="trailing" constant="8" id="c16-Ks-016"/>
+                                                <constraint firstItem="clb-02-aaa" firstAttribute="centerY" secondItem="ccv-02-aaa" secondAttribute="centerY" id="c17-Ks-017"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="cim-02-aaa" id="o01-Ot-001"/>
+                                            <outlet property="titleLabel" destination="clb-02-aaa" id="o02-Ot-002"/>
+                                            <segue destination="dtV-03-aaa" kind="show" identifier="showDetail" id="seg-02-dtl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lsS-02-aaa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tbl-02-aaa" firstAttribute="top" secondItem="lsS-02-aaa" secondAttribute="top" id="c18-Ks-018"/>
+                            <constraint firstItem="tbl-02-aaa" firstAttribute="leading" secondItem="lsS-02-aaa" secondAttribute="leading" id="c19-Ks-019"/>
+                            <constraint firstItem="lsS-02-aaa" firstAttribute="trailing" secondItem="tbl-02-aaa" secondAttribute="trailing" id="c20-Ks-020"/>
+                            <constraint firstItem="lsS-02-aaa" firstAttribute="bottom" secondItem="tbl-02-aaa" secondAttribute="bottom" id="c21-Ks-021"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="My USA Trips" largeTitleDisplayMode="always" id="lsN-02-aaa"/>
+                    <connections>
+                        <outlet property="tableView" destination="tbl-02-aaa" id="o03-Ot-003"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fr2-02-aaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="100"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="s03-Dt-Sc1">
+            <objects>
+                <viewController id="dtV-03-aaa" customClass="DetailViewController" customModule="FavoritesNavigator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dtW-03-aaa">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scr-03-aaa">
+                                <rect key="frame" x="0.0" y="113" width="393" height="705"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnt-03-aaa" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="551"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="golden_gate" translatesAutoresizingMaskIntoConstraints="NO" id="pho-03-aaa">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="c22-Ks-022"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="leading" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vst-03-aaa">
+                                                <rect key="frame" x="20" y="320" width="353" height="211"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" text="Golden Gate Bridge" numberOfLines="0" id="ttl-03-aaa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="33.666666666666664"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" text="San Francisco, CA" id="sub-03-aaa">
+                                                        <rect key="frame" x="0.0" y="41.666666666666664" width="130" height="20"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="hst-03-aaa">
+                                                        <rect key="frame" x="0.0" y="69.666666666666657" width="126" height="22"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="st1-03-aaa">
+                                                                <rect key="frame" x="0" y="0.5" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="22" id="c01-Ks-001"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="c02-Ks-002"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="st2-03-aaa">
+                                                                <rect key="frame" x="26" y="0.5" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="22" id="c03-Ks-003"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="c04-Ks-004"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="st3-03-aaa">
+                                                                <rect key="frame" x="52" y="0.5" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="22" id="c05-Ks-005"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="c06-Ks-006"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="st4-03-aaa">
+                                                                <rect key="frame" x="78" y="0.5" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="22" id="c07-Ks-007"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="c08-Ks-008"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="st5-03-aaa">
+                                                                <rect key="frame" x="104" y="0.5" width="22" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="22" id="c09-Ks-009"/>
+                                                                    <constraint firstAttribute="height" constant="22" id="c10-Ks-010"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" text="Description" numberOfLines="0" id="dsc-03-aaa">
+                                                        <rect key="frame" x="0.0" y="99.666666666666657" width="353" height="111.33333333333334"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pho-03-aaa" firstAttribute="top" secondItem="cnt-03-aaa" secondAttribute="top" id="c23-Ks-023"/>
+                                            <constraint firstItem="pho-03-aaa" firstAttribute="leading" secondItem="cnt-03-aaa" secondAttribute="leading" id="c24-Ks-024"/>
+                                            <constraint firstItem="cnt-03-aaa" firstAttribute="trailing" secondItem="pho-03-aaa" secondAttribute="trailing" id="c25-Ks-025"/>
+                                            <constraint firstItem="vst-03-aaa" firstAttribute="top" secondItem="pho-03-aaa" secondAttribute="bottom" constant="20" id="c26-Ks-026"/>
+                                            <constraint firstItem="vst-03-aaa" firstAttribute="leading" secondItem="cnt-03-aaa" secondAttribute="leading" constant="20" id="c27-Ks-027"/>
+                                            <constraint firstItem="cnt-03-aaa" firstAttribute="trailing" secondItem="vst-03-aaa" secondAttribute="trailing" constant="20" id="c28-Ks-028"/>
+                                            <constraint firstItem="cnt-03-aaa" firstAttribute="bottom" secondItem="vst-03-aaa" secondAttribute="bottom" constant="20" id="c29-Ks-029"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cnt-03-aaa" firstAttribute="top" secondItem="clg-03-aaa" secondAttribute="top" id="c30-Ks-030"/>
+                                    <constraint firstItem="cnt-03-aaa" firstAttribute="leading" secondItem="clg-03-aaa" secondAttribute="leading" id="c31-Ks-031"/>
+                                    <constraint firstItem="cnt-03-aaa" firstAttribute="trailing" secondItem="clg-03-aaa" secondAttribute="trailing" id="c32-Ks-032"/>
+                                    <constraint firstItem="cnt-03-aaa" firstAttribute="bottom" secondItem="clg-03-aaa" secondAttribute="bottom" id="c33-Ks-033"/>
+                                    <constraint firstItem="cnt-03-aaa" firstAttribute="width" secondItem="flg-03-aaa" secondAttribute="width" id="c34-Ks-034"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="clg-03-aaa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="flg-03-aaa"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dtS-03-aaa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scr-03-aaa" firstAttribute="top" secondItem="dtS-03-aaa" secondAttribute="top" id="c35-Ks-035"/>
+                            <constraint firstItem="scr-03-aaa" firstAttribute="leading" secondItem="dtS-03-aaa" secondAttribute="leading" id="c36-Ks-036"/>
+                            <constraint firstItem="dtS-03-aaa" firstAttribute="trailing" secondItem="scr-03-aaa" secondAttribute="trailing" id="c37-Ks-037"/>
+                            <constraint firstItem="dtS-03-aaa" firstAttribute="bottom" secondItem="scr-03-aaa" secondAttribute="bottom" id="c38-Ks-038"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="dtN-03-aaa"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="pho-03-aaa" id="o04-Ot-004"/>
+                        <outlet property="titleLabel" destination="ttl-03-aaa" id="o05-Ot-005"/>
+                        <outlet property="subtitleLabel" destination="sub-03-aaa" id="o06-Ot-006"/>
+                        <outlet property="ratingStackView" destination="hst-03-aaa" id="o07-Ot-007"/>
+                        <outlet property="descriptionLabel" destination="dsc-03-aaa" id="o08-Ot-008"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fr3-03-aaa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="golden_gate" width="1200" height="800"/>
+        <image name="star" catalog="system" width="128" height="120"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

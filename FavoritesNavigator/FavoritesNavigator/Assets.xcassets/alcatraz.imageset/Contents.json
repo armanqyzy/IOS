@@ -1,0 +1,12 @@
+{
+  "images": [
+    {
+      "filename": "alcatraz.jpg",
+      "idiom": "universal"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}
